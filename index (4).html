@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Key Driver – Acting Driver Booking, Chennai</title>
+<meta name="description" content="Key Driver – Your Car. Our Trusted Driver. Book an acting driver in Chennai from ₹399.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#07153a;--navy2:#0c1f50;--navy3:#13296a;--gold:#f5b81c;--gold2:#ffd966;--ink:#0b1430;--paper:#f7f5ef;--line:rgba(245,184,28,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins','Noto Sans Tamil',system-ui,sans-serif;background:var(--navy);color:#e9edf8;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+.gold{color:var(--gold)}
+body[data-lang="ta"] .en,body[data-lang="en"] .ta{display:none!important}
+
+header{position:sticky;top:0;z-index:30;background:rgba(7,21,58,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.brand{font-weight:800;font-size:20px;font-style:italic}
+.brand b{color:var(--gold)}
+.right{display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid var(--gold);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--gold);padding:6px 11px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+.lang button.on{background:var(--gold);color:var(--navy)}
+.call{background:var(--gold);color:var(--navy);padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap}
+
+.hero{padding:44px 0 34px;text-align:center;background:radial-gradient(600px 260px at 50% 0,rgba(245,184,28,.18),transparent 70%),linear-gradient(170deg,var(--navy),var(--navy2))}
+.hero h1{font-size:clamp(32px,9vw,48px);font-weight:800;font-style:italic}
+.hero h1 em{color:var(--gold)}
+.hero .tl{font-size:15px;color:#c9d3ee;margin:6px 0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:.15s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);box-shadow:0 8px 22px rgba(245,184,28,.3)}
+.btn-gold:active{transform:scale(.98)}
+.btn-wa{background:#25d366;color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.3)}
+.hero .small{margin-top:14px;font-size:13px;color:#9fb0da}
+
+section{padding:34px 0}
+h2{font-size:22px;font-weight:700;margin-bottom:6px;text-align:center}
+.sub{text-align:center;color:#a9b8de;font-size:14px;margin-bottom:20px}
+
+/* prices */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pr{background:var(--navy2);border:1.5px solid var(--line);border-radius:16px;padding:16px 6px;text-align:center}
+.pr.pop{border-color:var(--gold);background:var(--navy3)}
+.pr .h{font-size:13px;color:var(--gold);font-weight:600}
+.pr .p{font-size:28px;font-weight:800}
+.pr .p small{font-size:15px;color:var(--gold)}
+.pnote{text-align:center;font-size:12.5px;color:#a9b8de;margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.chips span{font-size:12.5px;border:1px solid var(--line);padding:6px 12px;border-radius:999px;color:#c9d3ee}
+
+/* form */
+.form{background:var(--paper);color:var(--ink);border-radius:22px;padding:22px 18px;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.form h2{color:var(--navy);margin-bottom:16px}
+.step{font-size:12px;font-weight:700;letter-spacing:.05em;color:#6a7396;text-transform:uppercase;margin:16px 0 8px}
+.step:first-of-type{margin-top:0}
+.opts{display:grid;gap:8px}
+.o2{grid-template-columns:repeat(2,1fr)}
+.o3{grid-template-columns:repeat(3,1fr)}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opt span{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:8px 6px;border:2px solid #d3d9ea;border-radius:12px;background:#fff;font-size:13.5px;font-weight:600;line-height:1.25;transition:.12s}
+.opt span small{font-size:12px;color:#5a6483;font-weight:500}
+.opt input:checked+span{border-color:var(--navy3);background:#eaf0ff;box-shadow:0 0 0 2px rgba(19,41,106,.15)}
+.opt input:focus-visible+span{outline:3px solid var(--gold)}
+label.l{display:block;font-size:13px;font-weight:600;margin:12px 0 5px;color:#26305a}
+input.t,select.t,textarea.t{width:100%;padding:13px 14px;border:2px solid #d3d9ea;border-radius:12px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+input.t:focus,textarea.t:focus,select.t:focus{outline:none;border-color:var(--navy3)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bad input.t{border-color:#d33}
+.em{display:none;color:#c22;font-size:12.5px;margin-top:4px}
+.bad .em{display:block}
+details.more{margin-top:14px}
+details.more summary{cursor:pointer;font-size:13.5px;font-weight:600;color:var(--navy3);padding:6px 0}
+.sum{margin:18px 0 12px;background:var(--navy);color:#fff;border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.sum b{font-size:24px;color:var(--gold)}
+.sum span{font-size:12.5px;color:#b8c6ea}
+.night{display:none;margin-bottom:12px;font-size:12.5px;background:#fff4d6;border:1px solid var(--gold);color:#6b4a00;padding:9px 12px;border-radius:10px}
+.night.on{display:block}
+#send{width:100%;font-size:17px;padding:17px}
+.hint{text-align:center;font-size:12.5px;color:#5a6483;margin-top:10px}
+
+footer{padding:30px 0 40px;text-align:center;font-size:13px;color:#8fa0cc;border-top:1px solid var(--line)}
+footer a{color:var(--gold);font-weight:700;font-size:18px}
+.fab{position:fixed;right:14px;bottom:14px;z-index:40;width:54px;height:54px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.45)}
+.fab svg{width:28px;height:28px;color:#fff}
+</style>
+</head>
+<body data-lang="ta">
+
+<header><div class="wrap nav">
+  <div class="brand">Key <b>Driver</b></div>
+  <div class="right">
+    <div class="lang"><button id="bta" class="on" type="button">தமிழ்</button><button id="ben" type="button">EN</button></div>
+    <a class="call" href="tel:+919150930897">📞 91509 30897</a>
+  </div>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>Key <em>Driver</em></h1>
+  <p class="tl">Your Car. Our Trusted Driver.</p>
+  <a href="#book" class="btn btn-gold"><span class="ta">டிரைவர் புக் பண்ணுங்கள்</span><span class="en">Book a Driver</span> ↓</a>
+  <p class="small"><span class="ta">உங்கள் காரை ஓட்ட தொழில்முறை டிரைவர் · ₹399 முதல்</span><span class="en">A professional driver for your own car · from ₹399</span></p>
+</div></div>
+
+<section><div class="wrap">
+  <h2><span class="ta">கட்டணம்</span><span class="en">Our Packages</span></h2>
+  <div class="prices">
+    <div class="pr"><div class="h">2 <span class="ta">மணி</span><span class="en">Hours</span></div><div class="p"><small>₹</small>399</div></div>
+    <div class="pr pop"><div class="h">4 <span class="ta">மணி</span><span class="en">Hours</span></div><div class="p"><small>₹</small>599</div></div>
+    <div class="pr"><div class="h">8 <span class="ta">மணி</span><span class="en">Hours</span></div><div class="p"><small>₹</small>999</div></div>
+  </div>
+  <p class="pnote"><span class="ta">கூடுதல் மணி · இரவு கட்டணம்: ₹120 – ₹200</span><span class="en">Extra hour · Night charge: ₹120 – ₹200</span></p>
+  <div class="chips">
+    <span>🚗 <span class="ta">பர்சனல் டிரைவர்</span><span class="en">Personal Driver</span></span>
+    <span>✈️ <span class="ta">ஏர்போர்ட்</span><span class="en">Airport</span></span>
+    <span>🛣 <span class="ta">வெளியூர்</span><span class="en">Outstation</span></span>
+    <span>💼 <span class="ta">கார்ப்பரேட்</span><span class="en">Corporate</span></span>
+    <span>💍 <span class="ta">திருமணம் / விழா</span><span class="en">Wedding & Events</span></span>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <form class="form" id="bf" novalidate>
+    <h2><span class="ta">புக்கிங்</span><span class="en">Book your driver</span></h2>
+
+    <div class="step">1 · <span class="ta">என்ன சேவை?</span><span class="en">Which service?</span></div>
+    <div class="opts o2" id="svc">
+      <label class="opt"><input type="radio" name="s" value="Personal Car Driver" checked><span>🚗 <span class="ta">பர்சனல் டிரைவர்</span><span class="en">Personal Driver</span></span></label>
+      <label class="opt"><input type="radio" name="s" value="Airport Pickup & Drop"><span>✈️ <span class="ta">ஏர்போர்ட்</span><span class="en">Airport</span></span></label>
+      <label class="opt"><input type="radio" name="s" value="Outstation Travel"><span>🛣 <span class="ta">வெளியூர்</span><span class="en">Outstation</span></span></label>
+      <label class="opt"><input type="radio" name="s" value="Corporate / Wedding / Event"><span>💍 <span class="ta">கார்ப்பரேட் / விழா</span><span class="en">Corporate / Event</span></span></label>
+    </div>
+
+    <div class="step">2 · <span class="ta">எத்தனை மணி நேரம்?</span><span class="en">How many hours?</span></div>
+    <div class="opts o3" id="pk">
+      <label class="opt"><input type="radio" name="p" value="2"><span>2 <span class="ta">மணி</span><span class="en">hrs</span><small>₹399</small></span></label>
+      <label class="opt"><input type="radio" name="p" value="4" checked><span>4 <span class="ta">மணி</span><span class="en">hrs</span><small>₹599</small></span></label>
+      <label class="opt"><input type="radio" name="p" value="8"><span>8 <span class="ta">மணி</span><span class="en">hrs</span><small>₹999</small></span></label>
+    </div>
+    <div class="opts" style="margin-top:8px"><label class="opt"><input type="radio" name="p" value="quote"><span><span class="ta">வேறு / விலை கேட்க</span><span class="en">Other / ask for a quote</span></span></label></div>
+
+    <div class="step">3 · <span class="ta">எப்போது?</span><span class="en">When?</span></div>
+    <div class="opts o2" id="dq">
+      <label class="opt"><input type="radio" name="d" value="today" checked><span><span class="ta">இன்று</span><span class="en">Today</span></span></label>
+      <label class="opt"><input type="radio" name="d" value="tomorrow"><span><span class="ta">நாளை</span><span class="en">Tomorrow</span></span></label>
+    </div>
+    <div class="two">
+      <div><label class="l" for="date"><span class="ta">வேறு தேதி</span><span class="en">Or pick a date</span></label><input class="t" type="date" id="date"></div>
+      <div><label class="l" for="time"><span class="ta">நேரம்</span><span class="en">Pickup time</span></label><input class="t" type="time" id="time" value="09:00"></div>
+    </div>
+
+    <div class="step">4 · <span class="ta">எங்கே வரணும்?</span><span class="en">Where?</span></div>
+    <div id="g-pick"><input class="t" id="pickup" placeholder="Pickup area / address" aria-label="Pickup"><div class="em"><span class="ta">பிக்-அப் இடத்தை எழுதுங்கள்</span><span class="en">Please enter the pickup place</span></div></div>
+
+    <div class="step">5 · <span class="ta">உங்கள் விவரம்</span><span class="en">Your details</span></div>
+    <div class="two">
+      <div id="g-name"><input class="t" id="name" placeholder="Name" autocomplete="name" aria-label="Name"><div class="em"><span class="ta">பெயர் எழுதுங்கள்</span><span class="en">Enter your name</span></div></div>
+      <div id="g-phone"><input class="t" id="phone" placeholder="Mobile" inputmode="numeric" autocomplete="tel" aria-label="Mobile"><div class="em"><span class="ta">10 இலக்க எண்</span><span class="en">10-digit number</span></div></div>
+    </div>
+
+    <details class="more">
+      <summary><span class="ta">+ மேலும் விவரம் (விருப்பம்)</span><span class="en">+ More details (optional)</span></summary>
+      <label class="l" for="drop"><span class="ta">சேருமிடம்</span><span class="en">Drop / destination</span></label><input class="t" id="drop">
+      <div class="two">
+        <div><label class="l" for="gear"><span class="ta">கியர்</span><span class="en">Gearbox</span></label><select class="t" id="gear"><option>Manual</option><option>Automatic</option></select></div>
+        <div><label class="l" for="car"><span class="ta">கார் மாடல்</span><span class="en">Car model</span></label><input class="t" id="car"></div>
+      </div>
+      <label class="l" for="notes"><span class="ta">குறிப்பு</span><span class="en">Notes</span></label><textarea class="t" id="notes" rows="2"></textarea>
+    </details>
+
+    <div class="sum"><div><span><span class="ta">மதிப்பிடப்பட்ட கட்டணம்</span><span class="en">Estimated fare</span></span><br><b id="amt">₹599</b></div><span id="amtn" style="text-align:right;max-width:55%"></span></div>
+    <div class="night" id="night"><span class="ta">🌙 இரவு / அதிகாலை நேரத்துக்கு இரவு கட்டணம் ₹120 – ₹200 பொருந்தும்.</span><span class="en">🌙 Night charge of ₹120 – ₹200 applies for late-night / early-morning pickups.</span></div>
+
+    <a id="send" class="btn btn-wa" href="https://wa.me/919150930897" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7a11.5 11.5 0 0 1-4.7-4.1c-.4-.5-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.3.8-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1c.2-.3.4-.2.7-.1l1.900.9c.3.100.5.200.6.300.1.200.1.800-.1 1.400z"/></svg>
+      <span class="ta">WhatsApp-ல் புக் பண்ணு</span><span class="en">Book on WhatsApp</span></a>
+    <p class="hint"><span class="ta">WhatsApp திறக்கும் – விவரங்கள் தயாராக இருக்கும். "Send" மட்டும் தட்டுங்கள்.</span><span class="en">WhatsApp opens with your details ready. Just tap Send.</span></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <a href="tel:+919150930897">📞 91509 30897</a>
+  <p style="margin-top:6px">Old Washermenpet, Chennai – 21</p>
+  <p style="margin-top:10px">© <span id="yr"></span> Key Driver</p>
+</div></footer>
+
+<a class="fab" href="https://wa.me/919150930897" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7a11.5 11.5 0 0 1-4.7-4.1c-.4-.5-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.3.8-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.6.3.1.2.1.8-.1 1.4z"/></svg></a>
+
+<script>
+(function(){
+  var NUM="919150930897", body=document.body;
+  var $=function(i){return document.getElementById(i)};
+  var PRICE={"2":399,"4":599,"8":999};
+  function lang(){return body.getAttribute('data-lang')}
+  function setLang(l){body.setAttribute('data-lang',l);document.documentElement.lang=l;$('bta').classList.toggle('on',l==='ta');$('ben').classList.toggle('on',l==='en');try{localStorage.setItem('kd-lang',l)}catch(e){}refresh()}
+  $('bta').onclick=function(){setLang('ta')};$('ben').onclick=function(){setLang('en')};
+  try{var s=localStorage.getItem('kd-lang');if(s==='en'||s==='ta')body.setAttribute('data-lang',s)}catch(e){}
+  $('bta').classList.toggle('on',lang()==='ta');$('ben').classList.toggle('on',lang()==='en');
+  $('yr').textContent=new Date().getFullYear();
+
+  function pad(n){return (n<10?'0':'')+n}
+  function ymd(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+  var now=new Date(), todayS=ymd(now), tm=new Date(now.getTime()+864e5), tomS=ymd(tm);
+  $('date').min=todayS;
+  function chosen(n){var r=document.querySelector('input[name="'+n+'"]:checked');return r?r.value:''}
+  function dateVal(){
+    if($('date').value)return $('date').value;
+    return chosen('d')==='tomorrow'?tomS:todayS;
+  }
+  $('date').addEventListener('change',function(){ if(this.value){document.querySelectorAll('input[name="d"]').forEach(function(r){r.checked=false})} refresh()});
+  document.querySelectorAll('input[name="d"]').forEach(function(r){r.addEventListener('change',function(){$('date').value='';refresh()})});
+
+  function isNight(t){if(!t)return false;var h=+t.split(':')[0];return h>=22||h<6}
+  function fmtD(d){var p=d.split('-');return p[2]+'-'+p[1]+'-'+p[0]}
+  function fmtT(t){var p=t.split(':'),h=+p[0],s=h>=12?'PM':'AM';h=h%12||12;return h+':'+p[1]+' '+s}
+  function phone(){return $('phone').value.replace(/\D/g,'').replace(/^(91|0)(?=\d{10}$)/,'')}
+
+  function message(){
+    var p=chosen('p'), pk=PRICE[p]?p+' Hours – ₹'+PRICE[p]:'Other / need quote';
+    var L=['Hello Key Driver, I want to book a driver.','',
+      'Service: '+chosen('s'),
+      'Package: '+pk,
+      'Date: '+fmtD(dateVal()),
+      'Pickup time: '+fmtT($('time').value)+(isNight($('time').value)?' (night)':''),
+      'Pickup: '+$('pickup').value.trim()];
+    if($('drop').value.trim())L.push('Drop: '+$('drop').value.trim());
+    L.push('Name: '+$('name').value.trim(),'Mobile: '+phone());
+    var car=$('gear').value+($('car').value.trim()?' – '+$('car').value.trim():'');
+    L.push('Car: '+car);
+    if($('notes').value.trim())L.push('Notes: '+$('notes').value.trim());
+    return L.join('\n');
+  }
+  function refresh(){
+    var p=chosen('p'),ta=lang()==='ta';
+    $('amt').textContent=PRICE[p]?'₹'+PRICE[p]:(ta?'விலை கேட்டு':'On request');
+    $('amtn').textContent=PRICE[p]?(ta?'கூடுதல் மணி / இரவு கட்டணம் தனி: ₹120 – ₹200':'Extra hour / night charge extra: ₹120 – ₹200'):(ta?'தூரம்/நேரத்தைப் பொறுத்து சொல்வோம்':'Quoted by distance & time');
+    $('night').classList.toggle('on',isNight($('time').value));
+    $('send').href='https://wa.me/'+NUM+'?text='+encodeURIComponent(message());
+  }
+  ['input','change'].forEach(function(ev){$('bf').addEventListener(ev,refresh)});
+
+  function flag(id,on){$(id).classList.toggle('bad',on);return on}
+  $('send').addEventListener('click',function(e){
+    var a=flag('g-pick',$('pickup').value.trim().length<3),
+        b=flag('g-name',$('name').value.trim().length<2),
+        c=flag('g-phone',!/^[6-9]\d{9}$/.test(phone())),
+        d=!$('time').value || dateVal()<todayS;
+    if(a||b||c||d){
+      e.preventDefault();
+      var t=document.querySelector('.bad')||($('time'));
+      t.scrollIntoView({behavior:'smooth',block:'center'});
+      if(d)$('time').focus();
+      return;
+    }
+    refresh();
+  });
+  $('bf').addEventListener('submit',function(e){e.preventDefault()});
+  refresh();
+})();
+</script>
+</body>
+</html>
